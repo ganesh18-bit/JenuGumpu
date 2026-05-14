@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/nav_home"
+        android:icon="@drawable/ic_home"
+        android:title="@string/nav_home" />
+    <item android:id="@+id/nav_harvest"
+        android:icon="@drawable/ic_harvest"
+        android:title="@string/nav_harvest" />
+    <item android:id="@+id/nav_grading"
+        android:icon="@drawable/ic_grade"
+        android:title="@string/nav_grading" />
+    <item android:id="@+id/nav_price"
+        android:icon="@drawable/ic_price"
+        android:title="@string/nav_price" />
+    <item android:id="@+id/nav_batch"
+        android:icon="@drawable/ic_batch"
+        android:title="@string/nav_batch" />
+</menu>

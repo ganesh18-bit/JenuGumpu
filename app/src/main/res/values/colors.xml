@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary Honey Palette -->
+    <color name="honey_gold">#F59E0B</color>
+    <color name="honey_amber">#D97706</color>
+    <color name="honey_dark">#92400E</color>
+    <color name="honey_light">#FEF3C7</color>
+    <color name="honey_cream">#FFFBEB</color>
+    <color name="honey_deep">#78350F</color>
+
+    <!-- Forest Green Accents -->
+    <color name="forest_green">#15803D</color>
+    <color name="forest_light">#86EFAC</color>
+    <color name="forest_dark">#14532D</color>
+    <color name="leaf_green">#22C55E</color>
+
+    <!-- Warm Browns -->
+    <color name="bark_brown">#7C3AED</color>
+    <color name="wood_brown">#92400E</color>
+    <color name="earth_brown">#78350F</color>
+
+    <!-- Grade Colors -->
+    <color name="grade_premium">#F59E0B</color>       <!-- A Grade - Golden -->
+    <color name="grade_standard">#FB923C</color>      <!-- B Grade - Orange -->
+    <color name="grade_raw">#A16207</color>           <!-- C Grade - Dark -->
+    <color name="grade_mixed">#6B7280</color>         <!-- Mixed -->
+
+    <!-- UI Colors -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="text_primary">#1C1917</color>
+    <color name="text_secondary">#78716C</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="background">#FFFBEB</color>
+    <color name="card_bg">#FFFFFF</color>
+    <color name="divider">#E7E5E4</color>
+
+    <!-- Status Colors -->
+    <color name="success">#16A34A</color>
+    <color name="warning">#D97706</color>
+    <color name="error">#DC2626</color>
+    <color name="info">#2563EB</color>
+
+    <!-- Gradient Colors -->
+    <color name="gradient_start">#F59E0B</color>
+    <color name="gradient_end">#D97706</color>
+    <color name="gradient_dark_start">#78350F</color>
+    <color name="gradient_dark_end">#92400E</color>
+
+    <!-- Floral Source Colors -->
+    <color name="floral_coffee">#6F4E37</color>
+    <color name="floral_wildflower">#C084FC</color>
+    <color name="floral_eucalyptus">#34D399</color>
+    <color name="floral_mustard">#FACC15</color>
+    <color name="floral_multifloral">#F87171</color>
+
+    <!-- Bottom Nav -->
+    <color name="nav_selected">#F59E0B</color>
+    <color name="nav_unselected">#A8A29E</color>
+
+    <color name="colorPrimary">#F59E0B</color>
+    <color name="colorPrimaryDark">#D97706</color>
+    <color name="colorAccent">#15803D</color>
+</resources>

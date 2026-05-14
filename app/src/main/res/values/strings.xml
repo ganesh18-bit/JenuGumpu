@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ಜೇನು ಗುಂಪು</string>
+    <string name="app_tagline">ಜೇನು ಬೇಟೆಗಾರರ ಒಕ್ಕೂಟ</string>
+
+    <!-- Navigation -->
+    <string name="nav_home">ಮನೆ</string>
+    <string name="nav_harvest">ಸಂಗ್ರಹ</string>
+    <string name="nav_grading">ಗ್ರೇಡಿಂಗ್</string>
+    <string name="nav_price">ಬೆಲೆ</string>
+    <string name="nav_batch">ಬ್ಯಾಚ್</string>
+    <string name="nav_calculator">ಲಾಭ</string>
+
+    <!-- Home Screen -->
+    <string name="home_welcome">ನಮಸ್ಕಾರ! ಜೇನು ಗುಂಪಿಗೆ ಸ್ವಾಗತ</string>
+    <string name="total_stock">ಒಟ್ಟು ಸಂಗ್ರಹ</string>
+    <string name="total_stock_kg">ಒಟ್ಟು ಜೇನು (ಕಿ.ಗ್ರಾ)</string>
+    <string name="members">ಸದಸ್ಯರು</string>
+    <string name="today_harvest">ಇಂದಿನ ಸಂಗ್ರಹ</string>
+    <string name="quick_actions">ತ್ವರಿತ ಕ್ರಿಯೆಗಳು</string>
+    <string name="add_harvest">ಸಂಗ್ರಹ ದಾಖಲಿಸಿ</string>
+    <string name="check_quality">ಗುಣಮಟ್ಟ ಪರೀಕ್ಷಿಸಿ</string>
+    <string name="view_prices">ಬೆಲೆ ನೋಡಿ</string>
+    <string name="calculate_profit">ಲಾಭ ಲೆಕ್ಕ</string>
+    <string name="recent_harvests">ಇತ್ತೀಚಿನ ಸಂಗ್ರಹಗಳು</string>
+    <string name="view_all">ಎಲ್ಲಾ ನೋಡಿ</string>
+    <string name="collective_stock">ಒಕ್ಕೂಟದ ಸ್ಟಾಕ್</string>
+
+    <!-- Harvest Screen -->
+    <string name="harvest_log">ಸಂಗ್ರಹ ದಾಖಲೆ</string>
+    <string name="add_new_harvest">ಹೊಸ ಸಂಗ್ರಹ ಸೇರಿಸಿ</string>
+    <string name="date">ದಿನಾಂಕ</string>
+    <string name="location">ಸ್ಥಳ</string>
+    <string name="quantity_kg">ಪ್ರಮಾಣ (ಕಿ.ಗ್ರಾ)</string>
+    <string name="floral_source">ಹೂವಿನ ಮೂಲ</string>
+    <string name="honey_color">ಜೇನಿನ ಬಣ್ಣ</string>
+    <string name="notes">ಟಿಪ್ಪಣಿ</string>
+    <string name="save">ಉಳಿಸಿ</string>
+    <string name="cancel">ರದ್ದು</string>
+    <string name="harvest_saved">ಸಂಗ್ರಹ ಯಶಸ್ವಿಯಾಗಿ ಉಳಿಸಲಾಗಿದೆ</string>
+    <string name="select_date">ದಿನಾಂಕ ಆಯ್ಕೆ</string>
+    <string name="harvester_name">ಸಂಗ್ರಾಹಕರ ಹೆಸರು</string>
+
+    <!-- Floral Sources -->
+    <string name="coffee_blossom">ಕಾಫಿ ಹೂವು</string>
+    <string name="wildflower">ಕಾಡು ಹೂ</string>
+    <string name="eucalyptus">ನೀಲಗಿರಿ</string>
+    <string name="mustard">ಸಾಸಿವೆ</string>
+    <string name="multifloral">ಮಿಶ್ರ ಹೂ</string>
+    <string name="jamun">ನೇರಳೆ</string>
+    <string name="litchi">ಲಿಚಿ</string>
+
+    <!-- Grading Screen -->
+    <string name="honey_grading">ಜೇನು ಗ್ರೇಡಿಂಗ್</string>
+    <string name="grade_guide">ಗ್ರೇಡ್ ಮಾರ್ಗದರ್ಶಿ</string>
+    <string name="grade_a">ಗ್ರೇಡ್ A - ಉತ್ತಮ</string>
+    <string name="grade_b">ಗ್ರೇಡ್ B - ಮಧ್ಯಮ</string>
+    <string name="grade_c">ಗ್ರೇಡ್ C - ಸಾಮಾನ್ಯ</string>
+    <string name="moisture_test">ತೇವಾಂಶ ಪರೀಕ್ಷೆ</string>
+    <string name="color_check">ಬಣ್ಣ ಪರೀಕ್ಷೆ</string>
+    <string name="viscosity_check">ಸ್ನಿಗ್ಧತೆ ಪರೀಕ್ಷೆ</string>
+    <string name="grade_a_desc">ತೇವಾಂಶ &lt; 17%. ಬಂಗಾರ ಬಣ್ಣ. ಗಟ್ಟಿ ಮತ್ತು ಅಂಟುತ್ತದೆ.</string>
+    <string name="grade_b_desc">ತೇವಾಂಶ 17-20%. ಅಂಬರ್ ಬಣ್ಣ. ಮಧ್ಯಮ ಸ್ನಿಗ್ಧತೆ.</string>
+    <string name="grade_c_desc">ತೇವಾಂಶ > 20%. ಗಾಢ ಬಣ್ಣ. ತೆಳ್ಳಗೆ ಹರಿಯುತ್ತದೆ.</string>
+    <string name="simulate_test">ಪರೀಕ್ಷೆ ಮಾಡಿ</string>
+    <string name="test_result">ಪರೀಕ್ಷೆ ಫಲಿತಾಂಶ</string>
+    <string name="your_grade">ನಿಮ್ಮ ಜೇನಿನ ಗ್ರೇಡ್</string>
+
+    <!-- Price Screen -->
+    <string name="price_monitor">ಬೆಲೆ ಮಾನಿಟರ್</string>
+    <string name="retail_price">ಚಿಲ್ಲರೆ ಬೆಲೆ</string>
+    <string name="wholesale_price">ಸಗಟು ಬೆಲೆ</string>
+    <string name="per_kg">ಪ್ರತಿ ಕಿ.ಗ್ರಾ</string>
+    <string name="price_difference">ಬೆಲೆ ವ್ಯತ್ಯಾಸ</string>
+    <string name="bangalore">ಬೆಂಗಳೂರು</string>
+    <string name="mysuru">ಮೈಸೂರು</string>
+    <string name="mangalore">ಮಂಗಳೂರು</string>
+    <string name="hubli">ಹುಬ್ಬಳ್ಳಿ</string>
+    <string name="city_prices">ನಗರ ಬೆಲೆಗಳು</string>
+    <string name="last_updated">ಕೊನೆಯ ಬಾರಿ ಅಪ್‌ಡೇಟ್</string>
+
+    <!-- Batch Screen -->
+    <string name="batch_tracker">ಬ್ಯಾಚ್ ಟ್ರ್ಯಾಕರ್</string>
+    <string name="new_batch">ಹೊಸ ಬ್ಯಾಚ್</string>
+    <string name="batch_id">ಬ್ಯಾಚ್ ಐಡಿ</string>
+    <string name="batch_date">ಬ್ಯಾಚ್ ದಿನಾಂಕ</string>
+    <string name="jar_count">ಜಾರ್ ಸಂಖ್ಯೆ</string>
+    <string name="batch_grade">ಬ್ಯಾಚ್ ಗ್ರೇಡ್</string>
+    <string name="batch_source">ಬ್ಯಾಚ್ ಮೂಲ</string>
+    <string name="traceability">ಪತ್ತೆ ಯೋಗ್ಯತೆ</string>
+    <string name="scan_qr">QR ಸ್ಕ್ಯಾನ್ ಮಾಡಿ</string>
+    <string name="generate_qr">QR ಉತ್ಪಾದಿಸಿ</string>
+
+    <!-- Calculator Screen -->
+    <string name="profit_calculator">ಲಾಭ ಲೆಕ್ಕ</string>
+    <string name="total_honey_kg">ಒಟ್ಟು ಜೇನು (ಕಿ.ಗ್ರಾ)</string>
+    <string name="selling_price">ಮಾರಾಟ ಬೆಲೆ (/ಕಿ.ಗ್ರಾ)</string>
+    <string name="filtering_cost">ಶೋಧನ ವೆಚ್ಚ</string>
+    <string name="packaging_cost">ಪ್ಯಾಕೇಜಿಂಗ್ ವೆಚ್ಚ</string>
+    <string name="transport_cost">ಸಾರಿಗೆ ವೆಚ್ಚ</string>
+    <string name="total_revenue">ಒಟ್ಟು ಆದಾಯ</string>
+    <string name="total_cost">ಒಟ್ಟು ವೆಚ್ಚ</string>
+    <string name="net_profit">ನಿವ್ವಳ ಲಾಭ</string>
+    <string name="calculate">ಲೆಕ್ಕ ಹಾಕಿ</string>
+    <string name="vs_middleman">ಮಧ್ಯವರ್ತಿ vs ನೇರ ಮಾರಾಟ</string>
+    <string name="middleman_price">ಮಧ್ಯವರ್ತಿ ಬೆಲೆ (/ಕಿ.ಗ್ರಾ)</string>
+    <string name="extra_profit">ಹೆಚ್ಚುವರಿ ಲಾಭ</string>
+
+    <!-- Sustainable Harvest Tips -->
+    <string name="harvest_tips">ಸುಸ್ಥಿರ ಸಂಗ್ರಹ ಸಲಹೆ</string>
+    <string name="tip_1">ಜೇನುಗೂಡಿನ 30% ಜೇನು ಮಾತ್ರ ತೆಗೆಯಿರಿ</string>
+    <string name="tip_2">ರಾಣಿ ಜೇನಿನ ಕೋಶ ಹಾನಿ ಮಾಡಬೇಡಿ</string>
+    <string name="tip_3">ಬೇಸಿಗೆಯ ಆರಂಭದಲ್ಲಿ ಸಂಗ್ರಹಿಸಿ</string>
+    <string name="tip_4">ಹೊಗೆ ಬಳಸಿ ಜೇನ್ನೊಣಗಳನ್ನು ಶಾಂತಗೊಳಿಸಿ</string>
+
+    <!-- Common -->
+    <string name="rupees">₹</string>
+    <string name="kg">ಕಿ.ಗ್ರಾ</string>
+    <string name="no_data">ದತ್ತಾಂಶ ಇಲ್ಲ</string>
+    <string name="delete">ಅಳಿಸಿ</string>
+    <string name="edit">ತಿದ್ದಿ</string>
+    <string name="confirm">ಖಚಿತ</string>
+    <string name="search">ಹುಡುಕಿ</string>
+    <string name="filter">ಶೋಧಿಸಿ</string>
+    <string name="sort">ವರ್ಗೀಕರಿಸಿ</string>
+    <string name="loading">ಲೋಡ್ ಆಗುತ್ತಿದೆ...</string>
+</resources>

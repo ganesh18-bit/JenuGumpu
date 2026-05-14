@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Dialog Header -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:gravity="center_vertical"
+            android:layout_marginBottom="20dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="🫙" android:textSize="28sp" android:layout_marginEnd="12dp"/>
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:orientation="vertical">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="ಹೊಸ ಸಂಗ್ರಹ ದಾಖಲು"
+                    android:textSize="18sp" android:textStyle="bold"
+                    android:textColor="@color/honey_dark"
+                    android:fontFamily="sans-serif"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="ಎಲ್ಲಾ ವಿವರ ತುಂಬಿರಿ"
+                    android:textSize="13sp" android:textColor="@color/text_secondary"
+                    android:fontFamily="sans-serif"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Harvester Name -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_harvester"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="ಸಂಗ್ರಾಹಕರ ಹೆಸರು"
+            android:layout_marginBottom="12dp"
+            app:startIconDrawable="@drawable/ic_person"
+            app:startIconTint="@color/honey_gold"
+            style="@style/HoneyTextInput">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_harvester_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:fontFamily="sans-serif"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Date -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="ದಿನಾಂಕ"
+            android:layout_marginBottom="12dp"
+            app:startIconDrawable="@drawable/ic_calendar"
+            app:endIconMode="custom"
+            app:endIconDrawable="@drawable/ic_calendar"
+            style="@style/HoneyTextInput">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:clickable="true"
+                android:fontFamily="sans-serif"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Location -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="ಸ್ಥಳ (ಕಾಡು / ತೋಟ)"
+            android:layout_marginBottom="12dp"
+            app:startIconDrawable="@drawable/ic_location"
+            style="@style/HoneyTextInput">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Quantity -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_quantity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="ಪ್ರಮಾಣ (ಕಿ.ಗ್ರಾ)"
+            android:layout_marginBottom="16dp"
+            app:suffixText="ಕಿ.ಗ್ರಾ"
+            style="@style/HoneyTextInput">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_quantity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:fontFamily="sans-serif"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Floral Source Label -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="ಹೂವಿನ ಮೂಲ ಆಯ್ಕೆ ಮಾಡಿ"
+            android:textSize="14sp" android:textStyle="bold"
+            android:textColor="@color/honey_dark"
+            android:fontFamily="sans-serif"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Floral Source Chips -->
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/cg_floral_source"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:singleSelection="true"
+            app:selectionRequired="true">
+
+            <com.google.android.material.chip.Chip android:id="@+id/chip_coffee"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="☕ ಕಾಫಿ ಹೂವು"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:fontFamily="sans-serif"
+                android:checked="true"/>
+            <com.google.android.material.chip.Chip android:id="@+id/chip_wildflower"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="🌸 ಕಾಡು ಹೂ"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:fontFamily="sans-serif"/>
+            <com.google.android.material.chip.Chip android:id="@+id/chip_eucalyptus"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="🌿 ನೀಲಗಿರಿ"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:fontFamily="sans-serif"/>
+            <com.google.android.material.chip.Chip android:id="@+id/chip_mustard"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="🌻 ಸಾಸಿವೆ"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:fontFamily="sans-serif"/>
+            <com.google.android.material.chip.Chip android:id="@+id/chip_multifloral"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="🌺 ಮಿಶ್ರ ಹೂ"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:fontFamily="sans-serif"/>
+            <com.google.android.material.chip.Chip android:id="@+id/chip_jamun"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="🫐 ನೇರಳೆ"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:fontFamily="sans-serif"/>
+        </com.google.android.material.chip.ChipGroup>
+
+        <!-- Grade Label -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="ಜೇನಿನ ಗ್ರೇಡ್"
+            android:textSize="14sp" android:textStyle="bold"
+            android:textColor="@color/honey_dark"
+            android:fontFamily="sans-serif"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Grade Radio Buttons -->
+        <RadioGroup
+            android:id="@+id/rg_grade"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <RadioButton android:id="@+id/rb_grade_a"
+                android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="⭐ Grade A" android:checked="true"
+                android:textColor="@color/honey_amber"
+                android:buttonTint="@color/honey_gold"/>
+            <RadioButton android:id="@+id/rb_grade_b"
+                android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Grade B"
+                android:textColor="@color/grade_standard"
+                android:buttonTint="@color/grade_standard"/>
+            <RadioButton android:id="@+id/rb_grade_c"
+                android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Grade C"
+                android:textColor="@color/grade_raw"
+                android:buttonTint="@color/grade_raw"/>
+        </RadioGroup>
+
+        <!-- Notes -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_notes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="ಟಿಪ್ಪಣಿ (ಐಚ್ಛಿಕ)"
+            android:layout_marginBottom="20dp"
+            style="@style/HoneyTextInput">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_notes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minLines="2"
+                android:gravity="top"
+                android:fontFamily="sans-serif"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Buttons -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_cancel"
+                android:layout_width="0dp" android:layout_height="52dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                android:text="ರದ್ದು"
+                android:fontFamily="sans-serif"
+                style="@style/OutlinedHoneyButton"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_save"
+                android:layout_width="0dp" android:layout_height="52dp"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:text="✓ ಉಳಿಸಿ"
+                android:fontFamily="sans-serif"
+                style="@style/HoneyButton"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Background circle -->
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M0,0 L108,0 L108,108 L0,108 Z" />
+    <!-- Honeycomb hex pattern background -->
+    <path
+        android:fillColor="#D97706"
+        android:pathData="M54,18 L68,26 L68,42 L54,50 L40,42 L40,26 Z" />
+    <path
+        android:fillColor="#FDE68A"
+        android:pathData="M54,22 L65,28.5 L65,41.5 L54,48 L43,41.5 L43,28.5 Z" />
+    <!-- Honeycomb cells -->
+    <path
+        android:fillColor="#92400E"
+        android:fillAlpha="0.3"
+        android:pathData="M20,55 L30,49 L40,55 L40,67 L30,73 L20,67 Z" />
+    <path
+        android:fillColor="#92400E"
+        android:fillAlpha="0.3"
+        android:pathData="M68,55 L78,49 L88,55 L88,67 L78,73 L68,67 Z" />
+    <!-- Honey drop -->
+    <path
+        android:fillColor="#FFFBEB"
+        android:pathData="M54,28 C54,28 46,38 46,44 C46,49.5 49.5,53 54,53 C58.5,53 62,49.5 62,44 C62,38 54,28 54,28 Z" />
+    <!-- Bee stripes -->
+    <path
+        android:fillColor="#1C1917"
+        android:pathData="M48,75 L60,75 L60,78 L48,78 Z" />
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M46,78 L62,78 L62,81 L46,81 Z" />
+    <path
+        android:fillColor="#1C1917"
+        android:pathData="M48,81 L60,81 L60,84 L48,84 Z" />
+    <!-- Bee wings -->
+    <path
+        android:fillColor="#BFDBFE"
+        android:fillAlpha="0.8"
+        android:pathData="M40,72 C35,68 32,74 36,77 C38,78.5 42,77 44,75 Z" />
+    <path
+        android:fillColor="#BFDBFE"
+        android:fillAlpha="0.8"
+        android:pathData="M68,72 C73,68 76,74 72,77 C70,78.5 66,77 64,75 Z" />
+    <!-- Bee head -->
+    <path
+        android:fillColor="#1C1917"
+        android:pathData="M46,70 C46,66 62,66 62,70 C62,74 58,75 54,75 C50,75 46,74 46,70 Z" />
+    <!-- Antennae -->
+    <path
+        android:strokeColor="#1C1917"
+        android:strokeWidth="2"
+        android:pathData="M50,67 C48,63 44,60 43,58" />
+    <path
+        android:strokeColor="#1C1917"
+        android:strokeWidth="2"
+        android:pathData="M58,67 C60,63 64,60 65,58" />
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M41,56 C41,54.5 42.5,53 44,53 C45.5,53 47,54.5 47,56 C47,57.5 45.5,59 44,59 C42.5,59 41,57.5 41,56 Z" />
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M61,56 C61,54.5 62.5,53 64,53 C65.5,53 67,54.5 67,56 C67,57.5 65.5,59 64,59 C62.5,59 61,57.5 61,56 Z" />
+</vector>

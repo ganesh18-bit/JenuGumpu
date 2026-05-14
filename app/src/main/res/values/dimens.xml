@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="card_radius">16dp</dimen>
+    <dimen name="card_elevation">4dp</dimen>
+    <dimen name="card_margin">12dp</dimen>
+    <dimen name="screen_padding">16dp</dimen>
+    <dimen name="section_spacing">24dp</dimen>
+    <dimen name="button_height">52dp</dimen>
+    <dimen name="icon_size_small">24dp</dimen>
+    <dimen name="icon_size_medium">32dp</dimen>
+    <dimen name="icon_size_large">48dp</dimen>
+    <dimen name="icon_size_xlarge">64dp</dimen>
+    <dimen name="text_small">12sp</dimen>
+    <dimen name="text_body">14sp</dimen>
+    <dimen name="text_subtitle">16sp</dimen>
+    <dimen name="text_title">18sp</dimen>
+    <dimen name="text_heading">22sp</dimen>
+    <dimen name="text_display">28sp</dimen>
+    <dimen name="bottom_nav_height">64dp</dimen>
+    <dimen name="fab_size">56dp</dimen>
+    <dimen name="input_corner">12dp</dimen>
+    <dimen name="chip_height">36dp</dimen>
+</resources>

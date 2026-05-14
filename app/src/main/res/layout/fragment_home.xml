@@ -1,0 +1,565 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/honey_cream"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- === HEADER GRADIENT BANNER === -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@drawable/gradient_header">
+
+            <!-- Wave bottom -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:layout_gravity="bottom"
+                android:background="@color/honey_cream"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+            <!-- Bee emoji decoration -->
+            <TextView
+                android:id="@+id/bee_deco_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🐝"
+                android:textSize="28sp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/bee_deco_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🍯"
+                android:textSize="22sp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+                android:id="@+id/home_welcome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ನಮಸ್ಕಾರ! 🙏"
+                android:textSize="14sp"
+                android:textColor="#FEF3C7"
+                android:fontFamily="sans-serif"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="52dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/app_name_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ಜೇನು ಗುಂಪು"
+                android:textSize="28sp"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="4dp"
+                app:layout_constraintTop_toBottomOf="@+id/home_welcome"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/home_tagline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ಜೇನು ಬೇಟೆಗಾರರ ಒಕ್ಕೂಟ"
+                android:textSize="13sp"
+                android:textColor="#FDE68A"
+                android:fontFamily="sans-serif"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="2dp"
+                app:layout_constraintTop_toBottomOf="@+id/app_name_header"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- === STATS CARDS ROW === -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="-16dp"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp">
+
+            <!-- Total Stock Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card_total_stock"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="6dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="6dp"
+                app:strokeWidth="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:background="@drawable/grade_a_background">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🍯"
+                        android:textSize="28sp" />
+
+                    <TextView
+                        android:id="@+id/tv_total_stock"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0.0"
+                        android:textSize="26sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/honey_dark"
+                        android:fontFamily="sans-serif"
+                        android:layout_marginTop="4dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ಕಿ.ಗ್ರಾ ಸಂಗ್ರಹ"
+                        android:textSize="12sp"
+                        android:textColor="@color/honey_amber"
+                        android:fontFamily="sans-serif" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Members + Today Column -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginStart="6dp">
+
+                <!-- Members Card -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card_members"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="6dp"
+                    app:strokeWidth="0dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="12dp"
+                        android:gravity="center_vertical"
+                        android:background="@color/white">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="👨‍🌾"
+                            android:textSize="22sp"
+                            android:layout_marginEnd="8dp"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <TextView
+                                android:id="@+id/tv_member_count"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textSize="20sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/forest_green"
+                                android:fontFamily="sans-serif" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="ಸದಸ್ಯರು"
+                                android:textSize="11sp"
+                                android:textColor="@color/text_secondary"
+                                android:fontFamily="sans-serif" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Today's Harvest Card -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card_today"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="6dp"
+                    app:strokeWidth="0dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="12dp"
+                        android:gravity="center_vertical"
+                        android:background="@color/white">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="📅"
+                            android:textSize="22sp"
+                            android:layout_marginEnd="8dp"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <TextView
+                                android:id="@+id/tv_today_harvest"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0.0"
+                                android:textSize="20sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/honey_amber"
+                                android:fontFamily="sans-serif" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="ಇಂದು ಕಿ.ಗ್ರಾ"
+                                android:textSize="11sp"
+                                android:textColor="@color/text_secondary"
+                                android:fontFamily="sans-serif" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- === QUICK ACTIONS === -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ತ್ವರಿತ ಕ್ರಿಯೆಗಳು"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/honey_dark"
+            android:fontFamily="sans-serif"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Row 1 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="8dp">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/btn_add_harvest"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="6dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                app:strokeWidth="0dp"
+                android:clickable="true"
+                android:focusable="true">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                    android:orientation="vertical" android:gravity="center"
+                    android:background="@drawable/grade_a_background">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="🫙" android:textSize="32sp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="ಸಂಗ್ರಹ ದಾಖಲಿಸಿ" android:textSize="13sp"
+                        android:textStyle="bold" android:textColor="@color/honey_dark"
+                        android:layout_marginTop="4dp"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/btn_check_quality"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:layout_marginStart="6dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                app:strokeWidth="0dp"
+                android:clickable="true"
+                android:focusable="true">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                    android:orientation="vertical" android:gravity="center"
+                    android:background="#F0FDF4">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="⭐" android:textSize="32sp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="ಗ್ರೇಡಿಂಗ್" android:textSize="13sp"
+                        android:textStyle="bold" android:textColor="@color/forest_dark"
+                        android:layout_marginTop="4dp"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+
+        <!-- Row 2 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/btn_view_prices"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="6dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                app:strokeWidth="0dp"
+                android:clickable="true"
+                android:focusable="true">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                    android:orientation="vertical" android:gravity="center"
+                    android:background="#FFF7ED">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="📊" android:textSize="32sp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="ಬೆಲೆ ನೋಡಿ" android:textSize="13sp"
+                        android:textStyle="bold" android:textColor="#C2410C"
+                        android:layout_marginTop="4dp"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/btn_calculator"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:layout_marginStart="6dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                app:strokeWidth="0dp"
+                android:clickable="true"
+                android:focusable="true">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                    android:orientation="vertical" android:gravity="center"
+                    android:background="#F0F9FF">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="💰" android:textSize="32sp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="ಲಾಭ ಲೆಕ್ಕ" android:textSize="13sp"
+                        android:textStyle="bold" android:textColor="#1D4ED8"
+                        android:layout_marginTop="4dp"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+
+        <!-- === COLLECTIVE STOCK BANNER === -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_collective"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginTop="16dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="6dp"
+            app:strokeWidth="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:background="#1F2937">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ಒಕ್ಕೂಟದ ಒಟ್ಟು ಸ್ಟಾಕ್"
+                    android:textSize="14sp"
+                    android:textColor="#9CA3AF"
+                    android:fontFamily="sans-serif" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="8dp">
+
+                    <TextView
+                        android:id="@+id/tv_collective_stock"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="0.0 ಕಿ.ಗ್ರಾ"
+                        android:textSize="32sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/honey_gold"
+                        android:fontFamily="sans-serif" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="end">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="ಸಗಟು ಬೆಲೆ: ₹180/ಕಿ.ಗ್ರಾ"
+                            android:textSize="12sp"
+                            android:textColor="#6B7280"
+                            android:fontFamily="sans-serif" />
+                        <TextView
+                            android:id="@+id/tv_estimated_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="≈ ₹0"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/leaf_green"
+                            android:fontFamily="sans-serif"
+                            android:layout_marginTop="2dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Progress bar for stock -->
+                <com.google.android.material.progressindicator.LinearProgressIndicator
+                    android:id="@+id/stock_progress"
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:layout_marginTop="12dp"
+                    android:progress="0"
+                    android:max="100"
+                    app:indicatorColor="@color/honey_gold"
+                    app:trackColor="#374151"
+                    app:trackCornerRadius="4dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ಗುರಿ: 500 ಕಿ.ಗ್ರಾ (ದೊಡ್ಡ ಮಳಿಗೆಗೆ ಮಾರಾಟ)"
+                    android:textSize="11sp"
+                    android:textColor="#6B7280"
+                    android:fontFamily="sans-serif"
+                    android:layout_marginTop="4dp" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- === RECENT HARVESTS === -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="ಇತ್ತೀಚಿನ ಸಂಗ್ರಹಗಳು"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/honey_dark"
+                android:fontFamily="sans-serif" />
+
+            <TextView
+                android:id="@+id/tv_view_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ಎಲ್ಲಾ ನೋಡಿ →"
+                android:textSize="13sp"
+                android:textColor="@color/honey_amber"
+                android:fontFamily="sans-serif"
+                android:clickable="true"
+                android:focusable="true" />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_recent_harvests"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:nestedScrollingEnabled="false" />
+
+        <!-- === SUSTAINABLE TIPS === -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            app:strokeWidth="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:background="#F0FDF4">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🌿 ಸುಸ್ಥಿರ ಸಂಗ್ರಹ ಸಲಹೆ"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/forest_dark"
+                    android:fontFamily="sans-serif"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="🐝 ಜೇನುಗೂಡಿನ 30% ಜೇನು ಮಾತ್ರ ತೆಗೆಯಿರಿ"
+                    android:textSize="13sp" android:textColor="@color/forest_green"
+                    android:fontFamily="sans-serif" android:layout_marginBottom="4dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="👸 ರಾಣಿ ಜೇನಿನ ಕೋಶ ಹಾನಿ ಮಾಡಬೇಡಿ"
+                    android:textSize="13sp" android:textColor="@color/forest_green"
+                    android:fontFamily="sans-serif" android:layout_marginBottom="4dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="🌤️ ಬೇಸಿಗೆ ಆರಂಭದಲ್ಲಿ ಸಂಗ್ರಹಿಸಿ"
+                    android:textSize="13sp" android:textColor="@color/forest_green"
+                    android:fontFamily="sans-serif" android:layout_marginBottom="4dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="💨 ಹೊಗೆ ಬಳಸಿ ಜೇನ್ನೊಣಗಳನ್ನು ಶಾಂತಗೊಳಿಸಿ"
+                    android:textSize="13sp" android:textColor="@color/forest_green"
+                    android:fontFamily="sans-serif"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

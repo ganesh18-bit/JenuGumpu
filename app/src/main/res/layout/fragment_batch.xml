@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/honey_cream">
+
+    <!-- Header -->
+    <LinearLayout
+        android:id="@+id/batch_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:paddingTop="28dp"
+        android:background="@drawable/gradient_header">
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="📦 ಬ್ಯಾಚ್ ಟ್ರ್ಯಾಕರ್"
+            android:textSize="22sp" android:textStyle="bold" android:textColor="@color/white"
+            android:fontFamily="sans-serif"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="ಪ್ರತಿ ಜಾರ್‌ಗೆ ಬ್ಯಾಚ್ ID ನೀಡಿ"
+            android:textSize="14sp" android:textColor="#FDE68A"
+            android:fontFamily="sans-serif" android:layout_marginTop="4dp"/>
+
+        <!-- Summary Row -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:layout_marginTop="12dp">
+
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+                <TextView android:id="@+id/tv_total_batches"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="0" android:textSize="26sp" android:textStyle="bold"
+                    android:textColor="@color/white" android:fontFamily="sans-serif"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="ಒಟ್ಟು ಬ್ಯಾಚ್" android:textSize="12sp" android:textColor="#FDE68A"
+                    android:fontFamily="sans-serif"/>
+            </LinearLayout>
+
+            <View android:layout_width="1dp" android:layout_height="40dp" android:background="#FDE68A"/>
+
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+                <TextView android:id="@+id/tv_packed_count"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="0" android:textSize="26sp" android:textStyle="bold"
+                    android:textColor="@color/white" android:fontFamily="sans-serif"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="ಪ್ಯಾಕ್ ಆಗಿದೆ" android:textSize="12sp" android:textColor="#FDE68A"
+                    android:fontFamily="sans-serif"/>
+            </LinearLayout>
+
+            <View android:layout_width="1dp" android:layout_height="40dp" android:background="#FDE68A"/>
+
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+                <TextView android:id="@+id/tv_sold_count"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="0" android:textSize="26sp" android:textStyle="bold"
+                    android:textColor="@color/white" android:fontFamily="sans-serif"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="ಮಾರಾಟ" android:textSize="12sp" android:textColor="#FDE68A"
+                    android:fontFamily="sans-serif"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Batch RecyclerView -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_batches"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="160dp"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="80dp"
+        android:clipToPadding="false"
+        android:background="@color/honey_cream"/>
+
+    <!-- Empty State -->
+    <LinearLayout
+        android:id="@+id/batch_empty_state"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="160dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="gone">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="📦" android:textSize="64sp"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="ಯಾವುದೇ ಬ್ಯಾಚ್ ಇಲ್ಲ"
+            android:textSize="18sp" android:textColor="@color/text_secondary"
+            android:fontFamily="sans-serif" android:layout_marginTop="12dp"/>
+    </LinearLayout>
+
+    <!-- FAB -->
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/fab_add_batch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:layout_marginBottom="72dp"
+        android:text="ಹೊಸ ಬ್ಯಾಚ್"
+        android:textColor="@color/white"
+        android:fontFamily="sans-serif"
+        app:icon="@drawable/ic_add"
+        app:iconTint="@color/white"
+        app:backgroundTint="@color/honey_gold"
+        app:elevation="6dp"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

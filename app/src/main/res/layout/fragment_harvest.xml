@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/honey_cream">
+
+    <!-- Header -->
+    <LinearLayout
+        android:id="@+id/harvest_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:paddingTop="24dp"
+        android:background="@drawable/gradient_header">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🫙 ಸಂಗ್ರಹ ದಾಖಲೆ"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ನಿಮ್ಮ ಜೇನು ಸಂಗ್ರಹ ದಾಖಲಿಸಿ"
+            android:textSize="14sp"
+            android:textColor="#FDE68A"
+            android:fontFamily="sans-serif"
+            android:layout_marginTop="4dp" />
+
+    </LinearLayout>
+
+    <!-- Filter Chips -->
+    <HorizontalScrollView
+        android:id="@+id/filter_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:scrollbars="none"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:background="@color/white">
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/filter_chip_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:singleSelection="true"
+            app:selectionRequired="true">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ಎಲ್ಲಾ"
+                android:fontFamily="sans-serif"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:checked="true"
+                app:chipBackgroundColor="@color/honey_light"
+                app:checkedIconTint="@color/honey_amber"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_grade_a"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="⭐ Grade A"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                app:chipBackgroundColor="@color/honey_light"
+                app:checkedIconTint="@color/honey_amber"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_grade_b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Grade B"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                app:chipBackgroundColor="@color/honey_light"
+                app:checkedIconTint="@color/honey_amber"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_coffee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="☕ ಕಾಫಿ"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                app:chipBackgroundColor="@color/honey_light"
+                app:checkedIconTint="@color/honey_amber"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_wildflower"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🌸 ಕಾಡು"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                app:chipBackgroundColor="@color/honey_light"
+                app:checkedIconTint="@color/honey_amber"/>
+
+        </com.google.android.material.chip.ChipGroup>
+    </HorizontalScrollView>
+
+    <!-- Harvest List -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_harvests"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="158dp"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="80dp"
+        android:clipToPadding="false"
+        android:background="@color/honey_cream" />
+
+    <!-- Empty State -->
+    <LinearLayout
+        android:id="@+id/empty_state"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="158dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="🍯" android:textSize="64sp" />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="ಯಾವುದೇ ದಾಖಲೆ ಇಲ್ಲ"
+            android:textSize="18sp" android:textColor="@color/text_secondary"
+            android:fontFamily="sans-serif"
+            android:layout_marginTop="12dp"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="+ ಬಟನ್ ಒತ್ತಿ ಮೊದಲ ಸಂಗ್ರಹ ದಾಖಲಿಸಿ"
+            android:textSize="14sp" android:textColor="@color/honey_amber"
+            android:fontFamily="sans-serif"
+            android:layout_marginTop="8dp"/>
+    </LinearLayout>
+
+    <!-- FAB -->
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/fab_add_harvest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:layout_marginBottom="72dp"
+        android:text="ಹೊಸ ಸಂಗ್ರಹ"
+        android:textColor="@color/white"
+        android:fontFamily="sans-serif"
+        app:icon="@drawable/ic_add"
+        app:iconTint="@color/white"
+        app:backgroundTint="@color/honey_gold"
+        app:elevation="6dp" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/honey_cream">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:paddingTop="28dp"
+            android:background="@drawable/gradient_header">
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="⭐ ಜೇನು ಗ್ರೇಡಿಂಗ್ ಮಾರ್ಗದರ್ಶಿ"
+                android:textSize="22sp" android:textStyle="bold"
+                android:textColor="@color/white"
+                android:fontFamily="sans-serif"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="ನಿಮ್ಮ ಜೇನಿನ ಗುಣಮಟ್ಟ ಪರೀಕ್ಷಿಸಿ"
+                android:textSize="14sp" android:textColor="#FDE68A"
+                android:fontFamily="sans-serif"
+                android:layout_marginTop="4dp"/>
+        </LinearLayout>
+
+        <!-- === GRADE CARDS === -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:padding="12dp">
+
+            <!-- GRADE A CARD -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:cardCornerRadius="16dp" app:cardElevation="4dp" app:strokeWidth="0dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:padding="16dp"
+                    android:background="@drawable/grade_a_background">
+
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:gravity="center_vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="🥇" android:textSize="36sp" android:layout_marginEnd="12dp"/>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:orientation="vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="ಗ್ರೇಡ್ A — ಉತ್ತಮ"
+                                android:textSize="20sp" android:textStyle="bold"
+                                android:textColor="@color/honey_dark"
+                                android:fontFamily="sans-serif"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="ಪ್ರೀಮಿಯಂ ಗುಣಮಟ್ಟ"
+                                android:textSize="13sp" android:textColor="@color/honey_amber"
+                                android:fontFamily="sans-serif"/>
+                        </LinearLayout>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="₹350+\n/ಕಿ.ಗ್ರಾ"
+                            android:textSize="16sp" android:textStyle="bold"
+                            android:textColor="@color/forest_green"
+                            android:fontFamily="sans-serif"
+                            android:gravity="center"/>
+                    </LinearLayout>
+
+                    <View android:layout_width="match_parent" android:layout_height="1dp"
+                        android:background="@color/honey_gold" android:layout_marginVertical="12dp"/>
+
+                    <!-- Check Points -->
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:orientation="vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="💧 ತೇವಾಂಶ"
+                                android:textSize="13sp" android:textStyle="bold"
+                                android:textColor="@color/honey_dark"
+                                android:fontFamily="sans-serif"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="&lt; 17%"
+                                android:textSize="14sp" android:textColor="@color/forest_green"
+                                android:fontFamily="sans-serif"/>
+                        </LinearLayout>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:orientation="vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="🎨 ಬಣ್ಣ"
+                                android:textSize="13sp" android:textStyle="bold"
+                                android:textColor="@color/honey_dark"
+                                android:fontFamily="sans-serif"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="ಬಂಗಾರ / ತಿಳಿ ಅಂಬರ್"
+                                android:textSize="13sp" android:textColor="@color/forest_green"
+                                android:fontFamily="sans-serif"/>
+                        </LinearLayout>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:orientation="vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="🍬 ಸ್ನಿಗ್ಧ"
+                                android:textSize="13sp" android:textStyle="bold"
+                                android:textColor="@color/honey_dark"
+                                android:fontFamily="sans-serif"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="ದಪ್ಪ, ಅಂಟು"
+                                android:textSize="13sp" android:textColor="@color/forest_green"
+                                android:fontFamily="sans-serif"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- GRADE B CARD -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:cardCornerRadius="16dp" app:cardElevation="4dp" app:strokeWidth="0dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:padding="16dp"
+                    android:background="@drawable/grade_b_background">
+
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:gravity="center_vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="🥈" android:textSize="36sp" android:layout_marginEnd="12dp"/>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:orientation="vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="ಗ್ರೇಡ್ B — ಮಧ್ಯಮ"
+                                android:textSize="20sp" android:textStyle="bold"
+                                android:textColor="#92400E"
+                                android:fontFamily="sans-serif"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="ಸ್ಟ್ಯಾಂಡರ್ಡ್ ಗುಣಮಟ್ಟ"
+                                android:textSize="13sp" android:textColor="@color/grade_standard"
+                                android:fontFamily="sans-serif"/>
+                        </LinearLayout>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="₹250-350\n/ಕಿ.ಗ್ರಾ"
+                            android:textSize="16sp" android:textStyle="bold"
+                            android:textColor="@color/grade_standard"
+                            android:fontFamily="sans-serif"
+                            android:gravity="center"/>
+                    </LinearLayout>
+                    <View android:layout_width="match_parent" android:layout_height="1dp"
+                        android:background="@color/grade_standard" android:layout_marginVertical="12dp"/>
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:orientation="vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="💧 ತೇವಾಂಶ" android:textSize="13sp" android:textStyle="bold"
+                                android:textColor="#92400E" android:fontFamily="sans-serif"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="17–20%" android:textSize="14sp" android:textColor="@color/grade_standard"
+                                android:fontFamily="sans-serif"/>
+                        </LinearLayout>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:orientation="vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="🎨 ಬಣ್ಣ" android:textSize="13sp" android:textStyle="bold"
+                                android:textColor="#92400E" android:fontFamily="sans-serif"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="ಅಂಬರ್" android:textSize="13sp" android:textColor="@color/grade_standard"
+                                android:fontFamily="sans-serif"/>
+                        </LinearLayout>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:orientation="vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="🍬 ಸ್ನಿಗ್ಧ" android:textSize="13sp" android:textStyle="bold"
+                                android:textColor="#92400E" android:fontFamily="sans-serif"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="ಮಧ್ಯಮ" android:textSize="13sp" android:textColor="@color/grade_standard"
+                                android:fontFamily="sans-serif"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- GRADE C CARD -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="16dp" app:cardElevation="4dp" app:strokeWidth="0dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:padding="16dp"
+                    android:background="@drawable/grade_c_background">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:gravity="center_vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="🥉" android:textSize="36sp" android:layout_marginEnd="12dp"/>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:orientation="vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="ಗ್ರೇಡ್ C — ಸಾಮಾನ್ಯ"
+                                android:textSize="20sp" android:textStyle="bold"
+                                android:textColor="@color/grade_raw"
+                                android:fontFamily="sans-serif"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="ಕಚ್ಚಾ / ಮಿಶ್ರ"
+                                android:textSize="13sp" android:textColor="@color/grade_raw"
+                                android:fontFamily="sans-serif"/>
+                        </LinearLayout>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="₹150-250\n/ಕಿ.ಗ್ರಾ"
+                            android:textSize="16sp" android:textStyle="bold"
+                            android:textColor="@color/grade_raw"
+                            android:fontFamily="sans-serif"
+                            android:gravity="center"/>
+                    </LinearLayout>
+                    <View android:layout_width="match_parent" android:layout_height="1dp"
+                        android:background="@color/grade_raw" android:layout_marginVertical="12dp"/>
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:orientation="vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="💧 ತೇವಾಂಶ" android:textSize="13sp" android:textStyle="bold"
+                                android:textColor="@color/grade_raw" android:fontFamily="sans-serif"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="&gt; 20%" android:textSize="14sp" android:textColor="@color/error"
+                                android:fontFamily="sans-serif"/>
+                        </LinearLayout>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:orientation="vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="🎨 ಬಣ್ಣ" android:textSize="13sp" android:textStyle="bold"
+                                android:textColor="@color/grade_raw" android:fontFamily="sans-serif"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="ಗಾಢ ಕಂದು" android:textSize="13sp" android:textColor="@color/error"
+                                android:fontFamily="sans-serif"/>
+                        </LinearLayout>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:orientation="vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="🍬 ಸ್ನಿಗ್ಧ" android:textSize="13sp" android:textStyle="bold"
+                                android:textColor="@color/grade_raw" android:fontFamily="sans-serif"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="ತೆಳ್ಳಗೆ" android:textSize="13sp" android:textColor="@color/error"
+                                android:fontFamily="sans-serif"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+        <!-- === SIMULATED MOISTURE TEST === -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginStart="12dp" android:layout_marginEnd="12dp"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="16dp" app:cardElevation="6dp" app:strokeWidth="0dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="20dp"
+                android:background="@color/white">
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="💧 ತೇವಾಂಶ ಪರೀಕ್ಷೆ (ಅನುಕರಣೆ)"
+                    android:textSize="18sp" android:textStyle="bold"
+                    android:textColor="@color/honey_dark"
+                    android:fontFamily="sans-serif"
+                    android:layout_marginBottom="12dp"/>
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="ನಿಮ್ಮ ಜೇನಿನ ಅಂದಾಜು ತೇವಾಂಶ % ಆಯ್ಕೆ ಮಾಡಿ:"
+                    android:textSize="14sp" android:textColor="@color/text_secondary"
+                    android:fontFamily="sans-serif"
+                    android:layout_marginBottom="16dp"/>
+
+                <SeekBar
+                    android:id="@+id/seekbar_moisture"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:max="30"
+                    android:progress="15"
+                    android:progressTint="@color/honey_gold"
+                    android:thumbTint="@color/honey_amber"
+                    android:layout_marginBottom="8dp"/>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="10%" android:textSize="12sp" android:textColor="@color/text_secondary"
+                        android:fontFamily="sans-serif"/>
+                    <View android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="1"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="40%" android:textSize="12sp" android:textColor="@color/text_secondary"
+                        android:fontFamily="sans-serif"/>
+                </LinearLayout>
+
+                <!-- Result Display -->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/moisture_result_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/grade_a_background">
+
+                    <TextView
+                        android:id="@+id/tv_moisture_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="15%"
+                        android:textSize="36sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/honey_dark"
+                        android:fontFamily="sans-serif"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginStart="20dp"/>
+
+                    <TextView
+                        android:id="@+id/tv_moisture_grade"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🥇 ಗ್ರೇಡ್ A"
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/forest_green"
+                        android:fontFamily="sans-serif"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginEnd="20dp"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/tv_moisture_advice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ಉತ್ತಮ! ಈ ಜೇನು ಮಾರಾಟಕ್ಕೆ ಸಿದ್ಧ."
+                    android:textSize="14sp"
+                    android:textColor="@color/forest_green"
+                    android:fontFamily="sans-serif"
+                    android:layout_marginTop="8dp"/>
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

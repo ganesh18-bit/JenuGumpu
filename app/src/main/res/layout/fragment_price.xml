@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/honey_cream">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Header -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:padding="20dp" android:paddingTop="28dp"
+            android:background="@drawable/gradient_header">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="📊 ಬೆಲೆ ಮಾನಿಟರ್"
+                android:textSize="22sp" android:textStyle="bold" android:textColor="@color/white"
+                android:fontFamily="sans-serif"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="ಚಿಲ್ಲರೆ vs ಸಗಟು ಬೆಲೆ ಹೋಲಿಕೆ"
+                android:textSize="14sp" android:textColor="#FDE68A"
+                android:fontFamily="sans-serif" android:layout_marginTop="4dp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:id="@+id/tv_last_updated"
+                android:text="ಇಂದು ಅಪ್‌ಡೇಟ್ ಆಗಿದೆ"
+                android:textSize="12sp" android:textColor="#FDE68A"
+                android:fontFamily="sans-serif" android:layout_marginTop="4dp"/>
+        </LinearLayout>
+
+        <!-- Middleman Warning Banner -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginStart="12dp" android:layout_marginEnd="12dp"
+            android:layout_marginTop="12dp"
+            app:cardCornerRadius="12dp" app:cardElevation="3dp" app:strokeWidth="0dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:padding="14dp"
+                android:gravity="center_vertical" android:background="#FEF2F2">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="⚠️" android:textSize="28sp" android:layout_marginEnd="12dp"/>
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="ಮಧ್ಯವರ್ತಿ ಬಳಕೆ ಬೇಡ!"
+                        android:textSize="15sp" android:textStyle="bold" android:textColor="#DC2626"
+                        android:fontFamily="sans-serif"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="ನೇರ ಮಾರಾಟದಲ್ಲಿ 2x ಹೆಚ್ಚು ಲಾಭ ಸಿಗುತ್ತದೆ"
+                        android:textSize="12sp" android:textColor="#EF4444"
+                        android:fontFamily="sans-serif"/>
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Wholesale vs Retail Comparison -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp" android:layout_marginTop="12dp">
+
+            <!-- Wholesale Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:layout_marginEnd="6dp"
+                app:cardCornerRadius="16dp" app:cardElevation="4dp" app:strokeWidth="0dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:padding="16dp"
+                    android:background="#FEF2F2">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="😔 ಸಗಟು" android:textSize="14sp" android:textStyle="bold"
+                        android:textColor="#DC2626" android:fontFamily="sans-serif"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="(ಮಧ್ಯವರ್ತಿ)" android:textSize="11sp" android:textColor="#EF4444"
+                        android:fontFamily="sans-serif"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="₹120–180"
+                        android:textSize="28sp" android:textStyle="bold" android:textColor="#DC2626"
+                        android:fontFamily="sans-serif" android:layout_marginTop="8dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="ಪ್ರತಿ ಕಿ.ಗ್ರಾ" android:textSize="12sp" android:textColor="#EF4444"
+                        android:fontFamily="sans-serif"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Arrow -->
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="VS" android:textSize="18sp" android:textStyle="bold"
+                android:textColor="@color/honey_amber"
+                android:layout_gravity="center" android:layout_marginEnd="6dp"/>
+
+            <!-- Retail Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:cardCornerRadius="16dp" app:cardElevation="4dp" app:strokeWidth="0dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:padding="16dp"
+                    android:background="@drawable/grade_a_background">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="😊 ಚಿಲ್ಲರೆ" android:textSize="14sp" android:textStyle="bold"
+                        android:textColor="@color/forest_dark" android:fontFamily="sans-serif"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="(ನೇರ ಮಾರಾಟ)" android:textSize="11sp" android:textColor="@color/forest_green"
+                        android:fontFamily="sans-serif"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="₹350–600"
+                        android:textSize="28sp" android:textStyle="bold" android:textColor="@color/forest_green"
+                        android:fontFamily="sans-serif" android:layout_marginTop="8dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="ಪ್ರತಿ ಕಿ.ಗ್ರಾ" android:textSize="12sp" android:textColor="@color/forest_green"
+                        android:fontFamily="sans-serif"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+
+        <!-- City-wise Prices -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="🏙️ ನಗರ ಬೆಲೆಗಳು (ಚಿಲ್ಲರೆ)"
+            android:textSize="18sp" android:textStyle="bold" android:textColor="@color/honey_dark"
+            android:fontFamily="sans-serif"
+            android:layout_marginStart="16dp" android:layout_marginTop="20dp"
+            android:layout_marginBottom="8dp"/>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:paddingStart="12dp" android:paddingEnd="12dp">
+
+            <!-- Bangalore -->
+            <com.google.android.material.card.MaterialCardView android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_marginBottom="8dp"
+                app:cardCornerRadius="12dp" app:cardElevation="3dp" app:strokeWidth="0dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:padding="14dp" android:gravity="center_vertical"
+                    android:background="@color/white">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="🏙️ ಬೆಂಗಳೂರು" android:textSize="15sp" android:textStyle="bold"
+                        android:textColor="@color/text_primary" android:fontFamily="sans-serif"/>
+                    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:orientation="vertical" android:gravity="end">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Grade A: ₹550–600/ಕಿ.ಗ್ರಾ"
+                            android:textSize="13sp" android:textColor="@color/forest_green"
+                            android:fontFamily="sans-serif"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Grade B: ₹400–450/ಕಿ.ಗ್ರಾ"
+                            android:textSize="13sp" android:textColor="@color/honey_amber"
+                            android:fontFamily="sans-serif"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Mysuru -->
+            <com.google.android.material.card.MaterialCardView android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_marginBottom="8dp"
+                app:cardCornerRadius="12dp" app:cardElevation="3dp" app:strokeWidth="0dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:padding="14dp" android:gravity="center_vertical"
+                    android:background="@color/white">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="🏯 ಮೈಸೂರು" android:textSize="15sp" android:textStyle="bold"
+                        android:textColor="@color/text_primary" android:fontFamily="sans-serif"/>
+                    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:orientation="vertical" android:gravity="end">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Grade A: ₹450–500/ಕಿ.ಗ್ರಾ"
+                            android:textSize="13sp" android:textColor="@color/forest_green"
+                            android:fontFamily="sans-serif"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Grade B: ₹350–400/ಕಿ.ಗ್ರಾ"
+                            android:textSize="13sp" android:textColor="@color/honey_amber"
+                            android:fontFamily="sans-serif"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Mangalore -->
+            <com.google.android.material.card.MaterialCardView android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_marginBottom="8dp"
+                app:cardCornerRadius="12dp" app:cardElevation="3dp" app:strokeWidth="0dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:padding="14dp" android:gravity="center_vertical"
+                    android:background="@color/white">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="🌊 ಮಂಗಳೂರು" android:textSize="15sp" android:textStyle="bold"
+                        android:textColor="@color/text_primary" android:fontFamily="sans-serif"/>
+                    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:orientation="vertical" android:gravity="end">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Grade A: ₹480–530/ಕಿ.ಗ್ರಾ"
+                            android:textSize="13sp" android:textColor="@color/forest_green"
+                            android:fontFamily="sans-serif"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Grade B: ₹370–420/ಕಿ.ಗ್ರಾ"
+                            android:textSize="13sp" android:textColor="@color/honey_amber"
+                            android:fontFamily="sans-serif"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Hubli -->
+            <com.google.android.material.card.MaterialCardView android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_marginBottom="16dp"
+                app:cardCornerRadius="12dp" app:cardElevation="3dp" app:strokeWidth="0dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:padding="14dp" android:gravity="center_vertical"
+                    android:background="@color/white">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="🌆 ಹುಬ್ಬಳ್ಳಿ" android:textSize="15sp" android:textStyle="bold"
+                        android:textColor="@color/text_primary" android:fontFamily="sans-serif"/>
+                    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:orientation="vertical" android:gravity="end">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Grade A: ₹420–470/ಕಿ.ಗ್ರಾ"
+                            android:textSize="13sp" android:textColor="@color/forest_green"
+                            android:fontFamily="sans-serif"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Grade B: ₹320–370/ಕಿ.ಗ್ರಾ"
+                            android:textSize="13sp" android:textColor="@color/honey_amber"
+                            android:fontFamily="sans-serif"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
